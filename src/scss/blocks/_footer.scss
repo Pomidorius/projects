@@ -1,0 +1,146 @@
+.footer {
+    padding: 120px 0 20px 0;
+    background: #E9F0FB;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        svg {
+            margin-bottom: 30px;
+        }
+    }
+    &__descr {
+        color: #555;
+        font-family: Jost;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &-menu {
+        &__header {
+            color: #9B99A4;
+            font-family: Jost;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        &__nav {
+            padding: 0;
+            margin-top: 13px;
+        }
+        &__link {
+            list-style-type: none;
+            margin-top: 13px;
+            &:first-child {
+                margin-top: 0;
+            }
+            a {
+                color: #1E1E1E;
+                font-family: Jost;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                text-decoration: none;
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &-contacts {
+        &__header {
+            color: #9B99A4;
+            font-family: Jost;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+        }
+        &__locate {
+            display: flex;
+            a {
+                display: block;
+                width: 337px;
+            }
+        }
+        div {
+            margin-top: 12px;
+            &:first-child {
+                margin-top: 0;
+            }
+            a {
+                color: #1E1E1E;
+                font-family: Jost;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    }
+    &__btn {
+        width: 61px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        svg {
+            margin-bottom: 10px;
+            &:hover {
+                svg path {
+                    fill: #153D89;
+                }
+            }
+            &:active {
+                svg path {
+                    fill: #3D65B1;
+                }
+            }
+        }
+        span {
+            text-align: center;
+            color: #153D89;
+            font-family: Jost;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }
+    &-other {
+        display: flex;
+        padding: 0;
+        margin-top: 50px;
+        &__link {
+            list-style-type: none;
+            margin-right: 30px;
+            a {
+                color: #878590;
+                font-family: Jost;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                &:hover {
+                    color: #153D89;
+                }
+            }
+        }
+    }
+    .copyright {
+        margin-top: 47px;
+        color: #9B99A4;
+        font-family: Jost;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+    }
+}
