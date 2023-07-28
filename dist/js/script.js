@@ -2,9 +2,6 @@ const menuOppener = document.querySelector('.nav__hamburger'),
     menu = document.querySelector('.nav-menu_mobile'),
     menuCloser = document.querySelector('.nav-menu__hamburger'),
     linkMenu = document.getElementsByClassName('nav-menu__link'),
-    certificate = document.querySelector('.certificate'),
-    certificateOpenner = document.querySelector('.info-other__sertification'),
-    certificateCloser = document.querySelector('.certificate__closer'),
     linkMenuBtn = document.querySelector('.nav-menu__btn a'),
     promoArrowLeft = document.querySelector('.promo-swiper__arrow_left'),
     promoArrowRight = document.querySelector('.promo-swiper__arrow_right'),
@@ -173,6 +170,10 @@ promoArrowLeft.addEventListener('click', function () {
 });
 
 // certificate
+const certificate = document.querySelector('.certificate'),
+    certificateOpenner = document.querySelector('.info-other__sertification'),
+    certificateCloser = document.querySelector('.certificate__closer');
+
 certificateOpenner.addEventListener('click', () => {
     certificate.classList.remove('disable')
 });
@@ -201,6 +202,27 @@ for (let i = 0; i < tabs.length; i++) {
 		contents[i].classList.add("service-item_active");
 	});
 };
+
+// Устанавливаем высоту .service-item__wrap равной высоте активного .service-item
+function Resize() {
+    const container = document.querySelector('.service-item__wrap');
+    const activeItem = document.querySelector('.service-item_active');
+
+    if (activeItem) {
+        container.style.height = activeItem.offsetHeight + 'px';
+    }
+}
+
+ // Пересчитываем высоту .service-item__wrap при переключении таба
+tabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+        Resize();
+    });
+});
+
+// Обработчики событий, изменение высоты .service-item__wrap при загрузке и изменении размеров окна
+window.addEventListener('load', Resize);
+window.addEventListener('resize', Resize);
 
 // Special-swiper
 new Swiper('.special .swiper', {

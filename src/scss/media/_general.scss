@@ -31,6 +31,9 @@
     .info {
         padding-top: 320px;
         &-cards {
+            left: 50%;
+            transform: translateX(-50%);
+            width: inherit;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
@@ -71,7 +74,6 @@
             font-size: 40px;
         }
         &-nav {
-            overflow: auto;
             &__list {
                 margin-top: 25px;
             }
@@ -93,10 +95,10 @@
                 }
             }
             &__arrow_left {
-                left: -50px;
+                left: -10px;
             }
             &__arrow_right {
-                right: -40px;
+                right: -4px;
             }
         }
         .swiper {
@@ -192,15 +194,10 @@
         &__header {
             font-size: 33px;
         }
-        &-nav {
-        }
         &-item {
-            min-height: 1050px;
-            &__wrap {
-                min-height: 1050px;
-            }
             &__wrapper {
                 grid-template-columns: 600px;
+                grid-template-rows: auto;
                 justify-content: center;
             }
             &__header {
@@ -495,9 +492,6 @@
             font-size: 24px;
         }
         &-item {
-            &__wrap {
-                min-height: 1150px;
-            }
             &__wrapper {
                 grid-template-columns: 335px;
             }
@@ -508,6 +502,10 @@
                 width: 335px;
                 img {
                     width: 100%;
+                }
+                div svg{
+                    top: 4px;
+                    right: 6px;
                 }
             }
             .btn_first {

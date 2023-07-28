@@ -1,10 +1,7 @@
 .service {
     padding-top: 100px;
-    min-height: 750px;
     .container {
-        position: relative;
-        overflow: hidden;
-        min-height: 750px;
+        
     }
     &__header {
         color: #1E1E1E;
@@ -66,12 +63,14 @@
         left: -130%;
         transition: all 0.5s;
         background-color: #FFF;
-        height: 600px;
+        &__wrap {
+            position: relative;
+            overflow-x: hidden;
+        }
         &__wrapper {
             display: grid;
             grid-template-columns: minmax(auto, 670px) 456px;
             column-gap: 45px;
-            height: inherit;
         }
         &__header {
             color: #1E1E1E;
