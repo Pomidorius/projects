@@ -14,7 +14,12 @@
         &_negative {
             svg {
                 path {
-                    fill: #1E1E1E;
+                    &:nth-child(1) {
+                        fill: #1E1E1E;
+                    }
+                    &:nth-child(2) {
+                        fill: #fff;
+                    }
                 }
             }
         }

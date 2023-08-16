@@ -23,6 +23,11 @@
             border: 1px solid #D5DCE7;
             background: #FFF;
             overflow: hidden;
+            img {
+                display: block;
+                width: 345px;
+                height: 455px;
+            }
         }
         &__professional {
             color: #555;

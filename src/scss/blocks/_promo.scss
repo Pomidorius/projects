@@ -12,14 +12,24 @@
         min-height: 900px;
         z-index: -1;
         &__slide {
+            position: relative;
+            &:after {
+                position: absolute;
+                content: '';
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(26, 26, 26, 0.6);
+            }
             &:nth-child(1) {
-                background: url('../img/bg/promo-bg_desktop.jpg') no-repeat 50%/cover;
+                background: url('https://cdn.pixabay.com/photo/2023/08/05/13/32/hummingbird-8171118_1280.jpg') no-repeat 50%/cover;
             }
             &:nth-child(2) {
-                background: url('../img/bg/promo-bg_desktop.jpg') no-repeat  50%/cover;
+                background: url('https://cdn.pixabay.com/photo/2023/05/30/15/39/fox-squirrel-8028963_1280.jpg') no-repeat  50%/cover;
             }
             &:nth-child(3) {
-                background: url('../img/bg/promo-bg_desktop.jpg') no-repeat  50%/cover;
+                background: url('https://cdn.pixabay.com/photo/2023/08/07/14/27/butterfly-8175198_1280.jpg') no-repeat  50%/cover;
             }
         }
         &__arrow_right, &__arrow_left {
